@@ -23,12 +23,13 @@ const Search = ({ item = {} }) => {
 
       <form className='search-box-wrapper'>
         <div className='search-box'>
-          <div className='search-icon'>
+          <label htmlFor='input' className='search-icon'>
             <img src={search} alt='' className='img' />
-          </div>
+          </label>
 
           <input
-            className='input'
+            id='input'
+            name='search-bar'
             value={searchText}
             onChange={({ target: { value } }) => {
               setSearchText(value);

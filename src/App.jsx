@@ -1,11 +1,20 @@
-import Landing from './containers/Landing';
+import React, { Suspense } from 'react';
+const Landing = React.lazy(() => import('./containers/Landing'));
 
-function App() {
+const App = () => {
   return (
-    <div className="app">
-      <Landing />
+    <div className='app'>
+      <Suspense
+        fallback={
+          <div className='lazy-loading'>
+            <p>Loading...</p>
+          </div>
+        }
+      >
+        <Landing />
+      </Suspense>
     </div>
   );
-}
+};
 
 export default App;
