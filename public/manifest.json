@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "author": "Saksham Johri",
+  "short_name": "Search Engine",
+  "name": "Search Engine",
   "icons": [
     {
       "src": "favicon.ico",
